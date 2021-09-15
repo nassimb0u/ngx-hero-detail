@@ -1,6 +1,13 @@
 {
-  "name": "ngx-hero-detail",
+  "name": "@nassimb0u/ngx-hero-detail",
   "version": "0.0.4",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nassimb0u/ngx-hero-detail.git"
+  },
+  "author": "nassimb0u",
+  "license": "MIT",
+  "homepage": "https://github.com/nassimb0u/ngx-hero-detail",
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0",
