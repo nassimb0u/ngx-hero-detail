@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Location } from '@angular/common';
+import { Hero } from '../hero';
 
 @Component({
   selector: 'lib-detail',
@@ -8,7 +9,8 @@ import { Location } from '@angular/common';
 })
 export class DetailComponent implements OnInit {
 
-  @Input() hero?: any = { id: 20, name: 'Tornado' };
+  @Input() hero?: Hero;
+  @Output() heroModifiedEvent =  new EventEmitter<Hero>();
 
   constructor(
     private location: Location
@@ -18,7 +20,7 @@ export class DetailComponent implements OnInit {
   }
 
   save(): void {
-    this.goBack();
+    this.heroModifiedEvent.emit(this.hero);
   }
 
   goBack(): void {
